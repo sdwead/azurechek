@@ -87,7 +87,7 @@
           this.checking = true
           this.checkedAccouts = []
           const accouts = this.accoutText.split(/\r?\n/).map(account => {
-            const [email, password] = account.split(',').map(i => i.trim())
+            const [email, password] = account.split(':').map(i => i.trim())
             if (!email || !password) {
               return
             }
